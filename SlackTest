@@ -1,0 +1,23 @@
+def attachments = [
+  [
+    text: 'I find your lack of faith disturbing!',
+    fallback: 'Hey, Vader seems to be mad at you.',
+    color: '#ff0000'
+  ]
+]
+
+pipeline {
+    agent none 
+    stages {
+        stage('Send Slack Message') {
+            steps {
+                slackSend color: 'good', message: 'Message from Jenkins Pipeline'
+            }
+        }
+        stage('Send Slack Attachment') {
+            steps {
+                slackSend(attachments: attachments)
+            }
+        }
+    }
+}

@@ -5,7 +5,7 @@ slaveTemplates = new PodTemplates()
 pipeline {
   agent {
     kubernetes { 
-      PodTemplates.dockerTemplate 
+      slaveTemplates.dockerTemplate 
     }
   }
   stages {

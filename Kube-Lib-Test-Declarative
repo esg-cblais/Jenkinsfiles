@@ -1,7 +1,3 @@
-import com.esg.utils.PodTemplates
-
-slaveTemplates = new PodTemplates()
-
 pipeline {
   agent {
     kubernetes { 

@@ -11,8 +11,8 @@ pipeline {
   stages {
     stage('Run docker') {
       steps {
-        container('docker') {
-          sh 'echo hello from docker'
+        container('jnlp') {
+          sh 'echo hello from jnlp!'
         }
       }
     }

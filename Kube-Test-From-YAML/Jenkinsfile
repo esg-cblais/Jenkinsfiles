@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Run maven') {
       steps {
-        sh "echo slaveTemplates.dockerTemplate"
+        echo slaveTemplates.dockerTemplate
 //        sh 'set'
 //        sh "echo OUTSIDE_CONTAINER_ENV_VAR = ${CONTAINER_ENV_VAR}"
 //        container('maven') {

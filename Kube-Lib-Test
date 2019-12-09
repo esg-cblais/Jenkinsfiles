@@ -6,6 +6,7 @@ slaveTemplates.dockerTemplate {
     node(POD_LABEL) {
       container('docker') {
         sh 'echo hello from docker'
+        sh "echo slaveTemplates.dockerTemplate"
       }
     }
 }

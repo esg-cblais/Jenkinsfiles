@@ -5,7 +5,7 @@ slaveTemplates = new PodTemplates()
 pipeline {
   agent {
     kubernetes { 
-      slaveTemplates.dockerTemplate 
+      yaml libraryResource('KubernetesPod.yaml')
     }
   }
   stages {
